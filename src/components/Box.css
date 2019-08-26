@@ -1,0 +1,12 @@
+.box {
+	height: 100px;
+	width: 100px;
+	border: 1px solid black;
+	position: absolute;
+	box-sizing: border-box;
+	cursor: grab;
+}
+.box:hover {
+	/* border-width: 2px; */
+	box-shadow: 0 0 2px black;
+}

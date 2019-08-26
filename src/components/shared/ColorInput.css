@@ -1,0 +1,9 @@
+.color-overlay {
+	display: inline-flex;
+	border: 3px solid rgb(62, 66, 73);
+	box-sizing: border-box;
+}
+.color-overlay input {
+	opacity: 0;
+	box-sizing: border-box;
+}

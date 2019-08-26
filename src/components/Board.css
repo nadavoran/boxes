@@ -1,0 +1,132 @@
+.board-container {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+.left-panel {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	background-color: #282c34;
+	flex: 1;
+	min-width: 150px;
+	max-width: 250px;
+	height: 100vh;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.left-panel.shrink {
+	max-width: 55px;
+	min-width: 55px;
+}
+.main-area {
+	flex: 2;
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.panel-item {
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding: 5px 20px;
+	margin-top: 1px;
+	font-size: 0.8em;
+	box-sizing: border-box;
+}
+.panel-area .panel-item {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.panel-item.top {
+	justify-content: space-evenly;
+}
+.shrink .panel-area {
+	font-size: 0.6em;
+}
+.shrink .history .panel-item {
+	padding: 5px 15px;
+}
+.shrink .existings .color-overlay,
+.shrink .history-box-size,
+.shrink .revive-item {
+	display: none;
+}
+.shrink .existings .panel-item {
+	font-size: 1.1em;
+}
+.left-panel.shrink .panel-item.top .next-size {
+	display: none;
+}
+.panel-item input {
+	max-width: 6em;
+}
+.revive-item {
+	border-radius: 50%;
+	height: 1.5em;
+	width: 1.5em;
+	background-color: transparent;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	font-size: 0.8em;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+.panel-item.history {
+	cursor: pointer;
+}
+.panel-item.history:active {
+	background-color: rgba(255, 255, 255, 0.4);
+	transform: scale(1.1);
+}
+.row-btn {
+	border: 1px solid #ababab;
+	background-color: transparent;
+	color: white;
+	height: 1.5em;
+	border-radius: 0.375em;
+	margin: 10px 20px;
+	margin-bottom: 0;
+}
+.reset-btn {
+	position: absolute;
+	bottom: 10px;
+	width: calc(100% - 40px);
+	bottom: 5px;
+}
+.left-panel.shrink .create-box {
+	margin: 10px 2px;
+	height: 3em;
+	font-size: 0.55em;
+}
+.left-panel.shrink .reset-btn {
+	margin: 5px 2px;
+	font-size: 0.55em;
+	width: calc(100% - 6px);
+}
+.scroll-area {
+	max-height: 32vh;
+	overflow: auto;
+	overflow-x: hidden;
+}
+.shrink-btn {
+	align-self: flex-end;
+	background-color: transparent;
+	margin: 5px;
+	border: none;
+	color: white;
+	transition: transform ease-in-out 300ms;
+}
+.shrink .shrink-btn,
+.shrinking .shrink-btn {
+	transform: rotate(180deg);
+}
+.shrink h4 {
+	margin-top: 1em;
+	margin-bottom: 0.7em;
+}
