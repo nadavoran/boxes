@@ -50,6 +50,15 @@ class Box extends React.Component {
 	componentDidUpdate() {
 		this.updateBoxInStorage();
 	}
+	componentWillUnmount() {
+		let existingBoxes = JSON.parse(
+			sessionStorage.getItem("existingBoxes") || "[]"
+		);
+		existingBoxes = existingBoxes.filter(box => {
+			return box.id !== this.props.id;
+		});
+		sessionStorage.setItem("existingBoxes", JSON.stringify(existingBoxes));
+	}
 
 	updateBoxInStorage() {
 		let existingBoxes = JSON.parse(
@@ -64,15 +73,6 @@ class Box extends React.Component {
 		} else {
 			existingBoxes[boxIndex] = currenBox;
 		}
-		sessionStorage.setItem("existingBoxes", JSON.stringify(existingBoxes));
-	}
-	componentWillUnmount() {
-		let existingBoxes = JSON.parse(
-			sessionStorage.getItem("existingBoxes") || "[]"
-		);
-		existingBoxes = existingBoxes.filter(box => {
-			return box.id !== this.props.id;
-		});
 		sessionStorage.setItem("existingBoxes", JSON.stringify(existingBoxes));
 	}
 	resize = event => {

@@ -17,7 +17,7 @@
 	height: 100vh;
 	overflow: hidden;
 	box-sizing: border-box;
-	font-size: 3.5vh;
+	font-size: 3.3vh;
 }
 .left-panel.shrink {
 	max-width: 55px;
