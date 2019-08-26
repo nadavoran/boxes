@@ -66,7 +66,6 @@ class Board extends React.Component {
 	updateBarsArea = () => {
 		// if we want to change chart size need to upda the diff
 		let pos = this.mainArea.getBoundingClientRect();
-		// if (this.state.areaPos.top !== pos.top) {
 		this.setState({
 			maxSize: Math.floor(
 				Math.min(
@@ -113,7 +112,6 @@ class Board extends React.Component {
 		if (!byColor.has(boxData.color)) {
 			byColor.set(boxData.color, 1);
 		} else {
-			// byColor.set(boxData.color,byColor.get(boxData.color).counter++;
 			byColor.set(boxData.color, byColor.get(boxData.color) + 1);
 		}
 		let existings = [...this.state.existings];
@@ -156,7 +154,6 @@ class Board extends React.Component {
 		if (!byColor.has(boxData.color)) {
 			byColor.set(boxData.color, 1);
 		} else {
-			// byColor.set(boxData.color,byColor.get(boxData.color).counter++;
 			byColor.set(boxData.color, byColor.get(boxData.color) + 1);
 		}
 		console.log(JSON.stringify(this.state.history[boxIndex]));
@@ -272,26 +269,17 @@ class Board extends React.Component {
 										>
 											Box {box.id}
 										</div>
-										{/* <div name={box.id}>{box.color}</div> */}
 										<div
 											className='history-box-size'
 											name={box.id}
 										>
 											{box.size}
 										</div>
-										{/* <span
-											// name={box.id}
-											className='revive-item'
-											// onClick={this.reviveBox}
-										> */}
 										<FontAwesomeIcon
 											icon={faUndo}
-											// name={box.id}
 											readOnly
 											className='revive-item'
-											// onClick={this.reviveBox}
 										/>
-										{/* </span> */}
 									</div>
 								);
 							})}

@@ -7,6 +7,5 @@
 	cursor: grab;
 }
 .box:hover {
-	/* border-width: 2px; */
 	box-shadow: 0 0 2px black;
 }
