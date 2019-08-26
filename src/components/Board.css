@@ -17,6 +17,7 @@
 	height: 100vh;
 	overflow: hidden;
 	box-sizing: border-box;
+	font-size: 3.5vh;
 }
 .left-panel.shrink {
 	max-width: 55px;
@@ -36,7 +37,6 @@
 	padding: 5px 20px;
 	margin-top: 1px;
 	font-size: 0.8em;
-	box-sizing: border-box;
 }
 .panel-area .panel-item {
 	background-color: rgba(255, 255, 255, 0.1);
@@ -63,6 +63,8 @@
 }
 .panel-item input {
 	max-width: 6em;
+	max-height: 1.5em;
+	font-size: 0.7em;
 }
 .revive-item {
 	border-radius: 50%;
